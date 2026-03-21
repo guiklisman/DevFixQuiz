@@ -1,0 +1,52 @@
+{
+
+    "version": "0.2.0",
+    "configurations": [
+        {
+            "name": "DevFixQuiz (Debug - Android)",
+            "request": "launch",
+            "type": "dart",
+            "program": "lib/main.dart",
+            "flutterMode": "debug",
+
+        },
+        {
+            "name": "DevFixQuiz (Debug - Web)",
+            "request": "launch",
+            "type": "dart",
+            "program": "lib/main.dart",
+            "flutterMode": "debug",
+            "deviceId": "chrome",
+            "webRenderer": "canvaskit"
+        },
+        {
+            "name": "DevFixQuiz (Profile - Android)",
+            "request": "launch",
+            "type": "dart",
+            "flutterMode": "profile",
+
+        },
+        {
+            "name": "DevFixQuiz (Release - Android)",
+            "request": "launch",
+            "type": "dart",
+            "flutterMode": "release",
+
+        },
+        {
+            "name": "DevFixQuiz - Hot Restart",
+            "request": "launch",
+            "type": "dart",
+            "program": "lib/main.dart",
+            "flutterMode": "debug",
+
+            "args": ["--hot"]
+        },
+        {
+            "name": "Attach to Device (Hot Reload)",
+            "request": "attach",
+            "type": "dart",
+
+        }
+    ]
+}

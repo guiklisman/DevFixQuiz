@@ -1,0 +1,552 @@
+[
+  {
+    "id": "dart_opp_01",
+    "pergunta": "Qual a principal diferença entre 'extends' e 'implements' no Dart?",
+    "opcoes": [
+      "Extends herda código e tipo; Implements assina apenas o contrato (assinatura)",
+      "Implements permite herança múltipla de código",
+      "Extends é exclusivo para classes abstratas",
+      "Não há diferença, são sinônimos"
+    ],
+    "indiceCorreto": 0
+  },
+  {
+    "id": "clean_arch_01",
+    "pergunta": "Na Clean Architecture, qual camada deve conter as regras de negócio puras (entidades e casos de uso)?",
+    "opcoes": [
+      "Data layer",
+      "Presentation layer",
+      "Domain layer",
+      "External layer"
+    ],
+    "indiceCorreto": 2
+  },
+  {
+    "id": "db_hive_01",
+    "pergunta": "Por que o Hive é considerado extremamente rápido em comparação com bancos SQL?",
+    "opcoes": [
+      "Porque usa tabelas relacionais em memória",
+      "Porque armazena dados em binário e não exige conversões complexas",
+      "Porque só funciona no iOS",
+      "Porque não suporta criptografia"
+    ],
+    "indiceCorreto": 1
+  },
+  {
+    "id": "di_injectable_01",
+    "pergunta": "Qual a função principal do pacote 'Injectable' (baseado em GetIt)?",
+    "opcoes": [
+      "Gerar animações de UI",
+      "Criar requisições HTTP automáticas",
+      "Automatizar a Injeção de Dependências via gerador de código",
+      "Substituir o MaterialApp"
+    ],
+    "indiceCorreto": 2
+  },
+  {
+    "id": "freezed_01",
+    "pergunta": "No uso de 'Freezed', qual o principal benefício para modelos de dados?",
+    "opcoes": [
+      "Permite editar variáveis privadas da UI",
+      "Transforma o app em Web automaticamente",
+      "Garante a imutabilidade dos dados e gera métodos como copyWith e unions",
+      "Aumenta o consumo de bateria"
+    ],
+    "indiceCorreto": 2
+  },
+  {
+    "id": "cubit_01",
+    "pergunta": "Qual a principal diferença entre um 'Cubit' e um 'BLoC'?",
+    "opcoes": [
+      "O Cubit é mais complexo e exige Streams manuais",
+      "O Cubit não utiliza eventos; as funções são chamadas diretamente para emitir novos estados",
+      "O BLoC não funciona com Widgets de Texto",
+      "O Cubit é exclusivo para animações"
+    ],
+    "indiceCorreto": 1
+  },
+  {
+    "id": "solid_01",
+    "pergunta": "O Princípio de Inversão de Dependência (D no SOLID) sugere que devemos depender de qual tipo de estrutura?",
+    "opcoes": [
+      "Classes Concretas",
+      "Singletons Globais",
+      "Abstrações (Interfaces)",
+      "Variáveis dinâmicas"
+    ],
+    "indiceCorreto": 2
+  },
+  {
+    "id": "native_01",
+    "pergunta": "O que é o 'MethodChannel' no ecossistema Flutter?",
+    "opcoes": [
+      "Um canal de TV exclusivo para desenvolvedores",
+      "Uma ponte para comunicação entre código Dart e código Nativo (Android/iOS)",
+      "Um widget para listas infinitas",
+      "Uma ferramenta de debug visual"
+    ],
+    "indiceCorreto": 1
+  },
+  {
+    "id": "notif_01",
+    "pergunta": "Para agendar uma notificação diária repetitiva em horários específicos, qual o componente ideal da biblioteca local_notifications?",
+    "opcoes": [
+      "showWithInterval",
+      "matchDateTimeComponents: DateTimeComponents.time",
+      "repeatDailyForever",
+      "ScheduleTask"
+    ],
+    "indiceCorreto": 1
+  },
+  {
+    "id": "lifecycle_01",
+    "pergunta": "Qual estado do ciclo de vida ('AppLifecycleState') indica que o app foi minimizado ou está em segundo plano?",
+    "opcoes": [
+      "resumed",
+      "inactive",
+      "paused",
+      "detached"
+    ],
+    "indiceCorreto": 2
+  },
+  {
+    "id": "clean_arch_02",
+    "pergunta": "Por que usamos Interfaces (contratos) na camada de Domínio para Repositórios?",
+    "opcoes": [
+      "Para obrigar o desenvolvedor a escrever mais código",
+      "Para que o Domínio não dependa de uma tecnologia específica de banco de dados",
+      "Porque o Flutter exige interfaces para compilar",
+      "Para aumentar a velocidade do app"
+    ],
+    "indiceCorreto": 1
+  },
+  {
+    "id": "dart_opp_02",
+    "pergunta": "É possível dar 'implements' em múltiplas classes nobDart?",
+    "opcoes": [
+      "Não, apenas em uma, assim como o extends",
+      "Sim, você pode assinar múltiplos contratos (interfaces) em uma única classe",
+      "Sim, mas apenas em classes do tipo Mixin",
+      "Apenas se as classes forem da mesma pasta"
+    ],
+    "indiceCorreto": 1
+  },
+  {
+    "id": "patt_01",
+    "pergunta": "No padrão Repository, qual é o papel principal dessa camada?",
+    "opcoes": [
+      "Desenhar a UI na tela",
+      "Abstrair a origem dos dados (API, Banco Local, Cache) para o resto do app",
+      "Gerenciar a navegação entre telas",
+      "Calcular animações físicas"
+    ],
+    "indiceCorreto": 1
+  },
+  {
+    "id": "notif_02",
+    "pergunta": "O que acontece ao chamar 'cancelAll()' nas notificações logo após o app entrar em modo 'resumed'?",
+    "opcoes": [
+      "O app é fechado",
+      "Limpa as notificações pendentes que foram agendadas quando o app foi minimizado",
+      "O histórico do quiz é apagado",
+      "Aumenta o volume do celular"
+    ],
+    "indiceCorreto": 1
+  },
+  {
+    "id": "dart_mixin_01",
+    "pergunta": "Para que serve um 'Mixin' no Dart?",
+    "opcoes": [
+      "Para herdar o estado de uma classe pai única",
+      "Para reutilizar código entre várias classes sem precisar de herança (extends)",
+      "Para criar bancos de dados NoSQL",
+      "Para substituir o uso de Widgets"
+    ],
+    "indiceCorreto": 1
+  },
+  {
+    "id": "dart_mixin_02",
+    "pergunta": "Qual palavra-chave é utilizada para aplicar um Mixin a uma classe?",
+    "opcoes": [
+      "extends",
+      "implements",
+      "with",
+      "mixin"
+    ],
+    "indiceCorreto": 2
+  },
+  {
+    "id": "dart_mixin_03",
+    "pergunta": "O que a palavra-chave 'on' faz quando usada na declaração de um mixin?",
+    "opcoes": [
+      "Liga o mixin no banco de dados",
+      "Define um evento de clique",
+      "Restringe quais classes podem usar aquele mixin",
+      "Ativa o modo debug"
+    ],
+    "indiceCorreto": 2
+  },
+  {
+    "id": "dart_oop_03",
+    "pergunta": "O que acontece se você der 'implements' em uma classe que já tem código implementado?",
+    "opcoes": [
+      "Você herda todo o código automaticamente",
+      "O app quebra na hora",
+      "Você é obrigado a sobrescrever todos os métodos, ignorando o código original",
+      "Nada acontece, o Dart ignora o implements"
+    ],
+    "indiceCorreto": 2
+  },
+  {
+    "id": "dart_oop_04",
+    "pergunta": "Qual a principal vantagem de usar uma 'abstract class' como contrato para 'implements'?",
+    "opcoes": [
+      "Ela não pode ser instanciada diretamente, servindo apenas como molde",
+      "Ela é mais rápida que classes normais",
+      "Ela consome menos memória RAM",
+      "Ela permite criar variáveis globais"
+    ],
+    "indiceCorreto": 0
+  },
+  {
+    "id": "dart_mixin_05",
+    "pergunta": "O Dart permite o uso de múltiplos Mixins em uma única classe?",
+    "opcoes": [
+      "Não, apenas um por classe",
+      "Sim, você pode usar 'with' seguido de vários mixins separados por vírgula",
+      "Apenas se as classes forem abstratas",
+      "Sim, mas apenas no iOS"
+    ],
+    "indiceCorreto": 1
+  },
+  {
+    "id": "di_injectable_02",
+    "pergunta": "Qual a diferença entre '@singleton' e '@lazySingleton' no Injectable?",
+    "opcoes": [
+      "Singleton cria a instância no início do app; LazySingleton cria apenas no primeiro uso",
+      "LazySingleton é mais rápido na execução total",
+      "Singleton só funciona com Widgets",
+      "Não há diferença funcional"
+    ],
+    "indiceCorreto": 0
+  },
+  {
+    "id": "clean_arch_03",
+    "pergunta": "Por que a camada de 'Domain' não deve importar 'material.dart' ou 'http.dart'?",
+    "opcoes": [
+      "Porque o Flutter proíbe",
+      "Para manter o core do app independente de frameworks de UI ou drivers externos",
+      "Para diminuir o tamanho do arquivo",
+      "Porque o Domain só aceita arquivos .txt"
+    ],
+    "indiceCorreto": 1
+  },
+  {
+    "id": "clean_arch_04",
+    "pergunta": "O que são 'Data Sources' na camada de Data?",
+    "opcoes": [
+      "São os Widgets de botão",
+      "São classes que conversam diretamente com a fonte (API, Banco de Dados, Cache)",
+      "São os modelos de animação",
+      "São arquivos de configuração do Git"
+    ],
+    "indiceCorreto": 1
+  },
+  {
+    "id": "freezed_03",
+    "pergunta": "Para que servem as 'Unions' (Sealed Classes) do Freezed no estado de um Cubit?",
+    "opcoes": [
+      "Para unir vários apps em um só",
+      "Para representar estados mutuamente exclusivos (ex: Loading, Success, Error) de forma tipada",
+      "Para criar loops infinitos",
+      "Para substituir o Navigator"
+    ],
+    "indiceCorreto": 1
+  },
+  {
+    "id": "cubit_02",
+    "pergunta": "Quando devemos usar 'BlocListener' em vez de 'BlocBuilder'?",
+    "opcoes": [
+      "Quando queremos desenhar algo na tela",
+      "Quando queremos executar ações pontuais (ex: mostrar Snackbar, navegar) sem rebuildar a UI",
+      "O BlocListener é apenas para erros",
+      "Sempre use o BlocBuilder por padrão"
+    ],
+    "indiceCorreto": 1
+  },
+  {
+    "id": "error_func_01",
+    "pergunta": "O que é o padrão 'Either' (comum em Clean Arch com dartz) no retorno de funções?",
+    "opcoes": [
+      "Uma forma de retornar dois valores ao mesmo tempo",
+      "Uma estrutura que representa Sucesso OU Falha (Left p/ Erro, Right p/ Valor)",
+      "Um comando do Git",
+      "Uma animação de transição"
+    ],
+    "indiceCorreto": 1
+  },
+  {
+    "id": "dart_stream_01",
+    "pergunta": "Qual a diferença de um Stream 'Broadcast' no Dart?",
+    "opcoes": [
+      "Ele só permite um único ouvinte",
+      "Ele permite múltiplos ouvintes (multi-subscription) simultâneos",
+      "Ele é mais lento que o Future",
+      "Ele desliga o Bluetooth do celular"
+    ],
+    "indiceCorreto": 1
+  },
+  {
+    "id": "solid_iso_01",
+    "pergunta": "O principio SOLID de Segregação de Interface (I) diz que...",
+    "opcoes": [
+      "Devemos ter uma única interface gigante",
+      "As classes não devem ser forçadas a depender de métodos que elas não usam",
+      "Interfaces devem ser privadas",
+      "Todas as classes devem ser interfaces"
+    ],
+    "indiceCorreto": 1
+  },
+  {
+    "id": "perf_const_01",
+    "pergunta": "Por que usar 'const' em construtores de widgets melhora a performance?",
+    "opcoes": [
+      "Evita que o Flutter instancie o widget novamente se os parâmetros não mudarem",
+      "Diminui o brilho da tela",
+      "Faz o app carregar mais rápido na loja",
+      "O const é apenas estético"
+    ],
+    "indiceCorreto": 0
+  },
+  {
+    "id": "async_wait_01",
+    "pergunta": "Ao carregar 5 arquivos JSON ao mesmo tempo, qual a abordagem mais eficiente em Dart?",
+    "opcoes": [
+      "Usar await um após o outro (sequencial)",
+      "Usar Future.wait() para disparar todos em paralelo",
+      "Não usar Future",
+      "Reiniciar o app a cada carga"
+    ],
+    "indiceCorreto": 1
+  },
+  {
+    "id": "debug_lint_01",
+    "pergunta": "Para que serve o arquivo 'analysis_options.yaml' no Flutter?",
+    "opcoes": [
+      "Para configurar as cores do app",
+      "Para definir regras de padronização de código (Linter)",
+      "Para gerenciar pacotes",
+      "Para salvar segredos de API"
+    ],
+    "indiceCorreto": 1
+  },
+  {
+    "id": "native_perm_01",
+    "pergunta": "Em qual arquivo do Android registramos as permissões (vibration, internet, etc)?",
+    "opcoes": [
+      "build.gradle",
+      "MainActivity.kt",
+      "AndroidManifest.xml",
+      "styles.xml"
+    ],
+    "indiceCorreto": 2
+  },
+  {
+    "id": "flutter_key_01",
+    "pergunta": "Para que serve o 'ValueKey' em itens de uma lista mutável no Flutter?",
+    "opcoes": [
+      "Para definir a cor do item",
+      "Para ajudar o Flutter a identificar qual widget corresponde a qual elemento após mudanças na lista",
+      "Para bloquear o toque na tela",
+      "Para salvar o item no banco"
+    ],
+    "indiceCorreto": 1
+  },
+  {
+    "id": "dart_ffi_01",
+    "pergunta": "O que o 'dart:ffi' permite fazer no ecossistema Dart/Flutter?",
+    "opcoes": [
+      "Chamar código nativo escrito em C/C++ ou Rust",
+      "Criar sites em HTML puro",
+      "Substituir o Firebase",
+      "Gerenciar o estado do Cubit"
+    ],
+    "indiceCorreto": 0
+  },
+  {
+    "id": "clean_arch_ent_01",
+    "pergunta": "O que define uma 'Entity' (Entidade) na Clean Architecture?",
+    "opcoes": [
+      "É um objeto que representa um Widget de texto",
+      "É uma classe puramente de lógica/dados que não conhece fontes externas (API/DB)",
+      "É o arquivo JSON de perguntas",
+      "É o ícone do aplicativo"
+    ],
+    "indiceCorreto": 1
+  },
+  {
+    "id": "isolate_01",
+    "pergunta": "Quando devemos usar 'Isolates' ou a função 'compute()'?",
+    "opcoes": [
+      "Para tarefas leves de UI",
+      "Para processamentos pesados que poderiam travar a main thread (jank)",
+      "Para navegar entre telas",
+      "Para mudar a cor do botão"
+    ],
+    "indiceCorreto": 1
+  },
+  {
+    "id": "solid_liskov_01",
+    "pergunta": "O principio de Substituição de Liskov (L no SOLID) garante que...",
+    "opcoes": [
+      "A classe pai pode ser trocada por qualquer classe filha sem quebrar o app",
+      "As funções devem ser estáticas",
+      "O app não pode ter herança",
+      "Tudo deve ser mixin"
+    ],
+    "indiceCorreto": 0
+  },
+  {
+    "id": "method_limit_01",
+    "pergunta": "Qual a principal limitação do MethodChannel puro?",
+    "opcoes": [
+      "Só funciona com números inteiros",
+      "Ele não é 'type-safe' por padrão (é baseado em mensagens de String/Map)",
+      "Não aceita listas",
+      "É exclusivo para Android"
+    ],
+    "indiceCorreto": 1
+  },
+  {
+    "id": "repository_adv_01",
+    "pergunta": "Qual a maior vantagem de mockar um Repository em testes de unidade?",
+    "opcoes": [
+      "Deixar os testes mais bonitos",
+      "Simular respostas rápidas e controladas sem depender de internet ou banco real",
+      "O Flutter exige mocks para compilar",
+      "Diminuir o número de arquivos de teste"
+    ],
+    "indiceCorreto": 1
+  },
+  {
+    "id": "dart_try_catch_01",
+    "pergunta": "Qual a melhor forma de tratar erros em um Future que pode falhar?",
+    "opcoes": [
+      "Ignorar o erro e deixar o app fechar",
+      "Usar try/catch dentro de um bloco async ou .catchError()",
+      "Dar um 'print' apenas",
+      "Usar apenas 'if (error != null)' em variáveis globais"
+    ],
+    "indiceCorreto": 1
+  },
+  {
+    "id": "test_theory_01",
+    "pergunta": "O que é um 'Teste de Unidade'?",
+    "opcoes": [
+      "Teste manual feito pelo cliente final",
+      "Teste automatizado de uma pequena parte lógica, como uma função ou classe, isolada do resto",
+      "Teste que roda o app inteiro no emulador",
+      "Teste exclusivo para as cores da interface"
+    ],
+    "indiceCorreto": 1
+  },
+  {
+    "id": "test_theory_02",
+    "pergunta": "Qual a diferença entre um 'Widget Test' e um 'Integration Test'?",
+    "opcoes": [
+      "Widget Test testa um componente em isolamento; Integration Test testa vários módulos juntos ou o app todo",
+      "Widget Test é feito em C++; Integration Test em Dart",
+      "Integration Test é apenas para bancos de dados",
+      "Não há diferença"
+    ],
+    "indiceCorreto": 0
+  },
+  {
+    "id": "test_mock_01",
+    "pergunta": "No contexto de testes, o que é um 'Mock' (ex: Mockito)?",
+    "opcoes": [
+      "Uma função que apaga o código",
+      "Um objeto simulado que 'imita' uma dependência real, permitindo controlar o que ela retorna",
+      "Uma ferramenta de design",
+      "O banco de dados de produção"
+    ],
+    "indiceCorreto": 1
+  },
+  {
+    "id": "test_tdd_01",
+    "pergunta": "Qual o ciclo básico do TDD (Test Driven Development)?",
+    "opcoes": [
+      "Escrever código -> Testar -> Publicar",
+      "Red (Falha) -> Green (Sucesso) -> Refactor (Melhorar)",
+      "Design -> Code -> Debug",
+      "Sempre escrever o teste por último"
+    ],
+    "indiceCorreto": 1
+  },
+  {
+    "id": "test_flutter_01",
+    "pergunta": "Em Flutter, para que serve o comando 'tester.pump()'?",
+    "opcoes": [
+      "Para ligar o celular",
+      "Para forçar o rebuild de um frame na árvore de widgets durante o teste",
+      "Para enviar dados para a internet",
+      "Para formatar o código"
+    ],
+    "indiceCorreto": 1
+  },
+  {
+    "id": "test_flutter_02",
+    "pergunta": "Para aguardar o fim de animações em Widget Tests, usamos qual comando?",
+    "opcoes": [
+      "tester.pump()",
+      "tester.pumpAndSettle()",
+      "Future.delayed()",
+      "tester.wait()"
+    ],
+    "indiceCorreto": 1
+  },
+  {
+    "id": "test_coverage_01",
+    "pergunta": "O que a 'Code Coverage' (Cobertura de Testes) mede?",
+    "opcoes": [
+      "A velocidade do app",
+      "A porcentagem de linhas de código que são executadas durante os testes",
+      "O número de downloads na loja",
+      "O tamanho final do APK"
+    ],
+    "indiceCorreto": 1
+  },
+  {
+    "id": "test_mock_02",
+    "pergunta": "Qual a diferença entre 'thenReturn' e 'thenAnswer' no Mockito/Mocktail?",
+    "opcoes": [
+      "thenReturn é síncrono; thenAnswer permite usar lógica ou assinronismo (Future)",
+      "thenReturn é apenas para Strings",
+      "Não há diferença",
+      "thenAnswer é exclusivo para inteiros"
+    ],
+    "indiceCorreto": 0
+  },
+  {
+    "id": "test_groups_01",
+    "pergunta": "Para que serve a função 'group()' nos arquivos de teste do Flutter?",
+    "opcoes": [
+      "Para criar novos usuários no app",
+      "Para organizar e agrupar testes relacionados no terminal de saída",
+      "Para rodar testes em paralelo",
+      "Para compartilhar o app com amigos"
+    ],
+    "indiceCorreto": 1
+  },
+  {
+    "id": "test_gold_01",
+    "pergunta": "O que é um 'Golden Test'?",
+    "opcoes": [
+      "Teste que garante que o app gera lucro",
+      "Teste visual que compara o widget com uma imagem de referência (screenshot)",
+      "Teste de segurança contra hackers",
+      "Teste de bateria"
+    ],
+    "indiceCorreto": 1
+  }
+]
