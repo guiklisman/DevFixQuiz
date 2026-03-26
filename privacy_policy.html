@@ -1,0 +1,244 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Política de Privacidade - Dev Quiz Fix</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Outfit:wght@300;400;600;700&display=swap" rel="stylesheet">
+    <style>
+        :root {
+            --primary: #6366f1;
+            --primary-glow: rgba(99, 102, 241, 0.4);
+            --bg: #0f172a;
+            --card-bg: rgba(30, 41, 59, 0.7);
+            --text-main: #f8fafc;
+            --text-dim: #94a3b8;
+            --accent: #22d3ee;
+            --border: rgba(255, 255, 255, 0.1);
+        }
+
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: 'Outfit', sans-serif;
+            background-color: var(--bg);
+            color: var(--text-main);
+            line-height: 1.6;
+            overflow-x: hidden;
+            background-image:
+                radial-gradient(circle at 10% 20%, rgba(99, 102, 241, 0.15) 0%, transparent 40%),
+                radial-gradient(circle at 90% 80%, rgba(34, 211, 238, 0.1) 0%, transparent 40%);
+        }
+
+        .container {
+            max-width: 900px;
+            margin: 0 auto;
+            padding: 40px 20px;
+        }
+
+        header {
+            text-align: center;
+            margin-bottom: 60px;
+            animation: fadeInDown 0.8s ease-out;
+        }
+
+        .logo {
+            font-size: 2.5rem;
+            font-weight: 700;
+            background: linear-gradient(135deg, var(--primary) 0%, var(--accent) 100%);
+            -webkit-background-clip: text;
+            background-clip: text;
+            -webkit-text-fill-color: transparent;
+            margin-bottom: 10px;
+        }
+
+        .update-date {
+            color: var(--text-dim);
+            font-size: 0.9rem;
+        }
+
+        main {
+            background: var(--card-bg);
+            backdrop-filter: blur(12px);
+            border-radius: 24px;
+            border: 1px solid var(--border);
+            padding: 40px;
+            box-shadow: 0 25px 50px -12px rgba(0, 0, 0, 0.5);
+            animation: fadeInUp 0.8s ease-out;
+        }
+
+        section {
+            margin-bottom: 40px;
+        }
+
+        h2 {
+            font-size: 1.5rem;
+            color: var(--accent);
+            margin-bottom: 20px;
+            display: flex;
+            align-items: center;
+            gap: 12px;
+        }
+
+        h2::before {
+            content: '';
+            width: 4px;
+            height: 24px;
+            background: var(--primary);
+            border-radius: 4px;
+            box-shadow: 0 0 10px var(--primary-glow);
+        }
+
+        p, ul {
+            color: var(--text-dim);
+            margin-bottom: 15px;
+            font-size: 1.05rem;
+        }
+
+        ul {
+            list-style: none;
+            padding-left: 10px;
+        }
+
+        li {
+            margin-bottom: 10px;
+            position: relative;
+            padding-left: 25px;
+        }
+
+        li::before {
+            content: '▹';
+            position: absolute;
+            left: 0;
+            color: var(--primary);
+            font-weight: bold;
+        }
+
+        .contact-card {
+            background: rgba(99, 102, 241, 0.1);
+            border: 1px solid rgba(99, 102, 241, 0.2);
+            padding: 20px;
+            border-radius: 16px;
+            margin-top: 20px;
+        }
+
+        .btn-print {
+            display: inline-block;
+            margin-top: 20px;
+            padding: 12px 24px;
+            background: var(--primary);
+            color: white;
+            text-decoration: none;
+            border-radius: 12px;
+            font-weight: 600;
+            transition: all 0.3s ease;
+            cursor: pointer;
+            border: none;
+        }
+
+        .btn-print:hover {
+            transform: translateY(-2px);
+            box-shadow: 0 10px 20px -5px var(--primary-glow);
+            filter: brightness(1.1);
+        }
+
+        footer {
+            margin-top: 40px;
+            text-align: center;
+            color: var(--text-dim);
+            font-size: 0.85rem;
+        }
+
+        @keyframes fadeInDown {
+            from { opacity: 0; transform: translateY(-30px); }
+            to { opacity: 1; transform: translateY(0); }
+        }
+
+        @keyframes fadeInUp {
+            from { opacity: 0; transform: translateY(30px); }
+            to { opacity: 1; transform: translateY(0); }
+        }
+
+        @media screen and (max-width: 600px) {
+            main { padding: 25px; }
+            .logo { font-size: 2rem; }
+        }
+
+        @media print {
+            .btn-print { display: none; }
+            body { background: white; color: black; }
+            main { border: none; box-shadow: none; background: none; backdrop-filter: none; }
+            h2 { color: #333; }
+            p, ul { color: #555; }
+        }
+    </style>
+</head>
+<body>
+
+<div class="container">
+    <header>
+        <div class="logo">Dev Quiz Fix</div>
+        <div class="update-date">Última atualização: 26 de Março de 2026</div>
+    </header>
+
+    <main>
+        <section id="introducao">
+            <h2>Introdução</h2>
+            <p>Seja bem-vindo ao <strong>Dev Quiz Fix</strong>. Sua privacidade é nossa prioridade absoluta. Este documento explica como lidamos com as informações no aplicativo.</p>
+        </section>
+
+        <section id="coleta">
+            <h2>Coleta de Dados</h2>
+            <p>O <strong>Dev Quiz Fix</strong> foi projetado para ser um aplicativo focado na privacidade do usuário:</p>
+            <ul>
+                <li><strong>Não coletamos</strong> dados pessoais identificáveis (como nome, e-mail ou localização).</li>
+                <li><strong>Não utilizamos</strong> contas de usuário em nuvem; todo o progresso é mantido apenas no seu aparelho.</li>
+                <li><strong>Não transmitimos</strong> nenhum dado para servidores externos.</li>
+            </ul>
+        </section>
+
+        <section id="armazenamento">
+            <h2>Armazenamento Local</h2>
+            <p>O aplicativo utiliza o armazenamento interno do seu dispositivo (Shared Preferences) apenas para:</p>
+            <ul>
+                <li>Salvar seu progresso em cada quiz.</li>
+                <li>Armazenar suas preferências de notificação para lembretes diários.</li>
+            </ul>
+            <p>Esses dados permanecem no seu celular e são excluídos caso você desinstale o aplicativo ou limpe os dados nas configurações do sistema.</p>
+        </section>
+
+        <section id="notificacoes">
+            <h2>Notificações Locais</h2>
+            <p>Se ativadas por você, as notificações são agendadas e disparadas localmente pelo seu sistema operacional. Não utilizamos serviços de Push externos ou rastreadores para este fim.</p>
+        </section>
+
+        <section id="servicos-terceiros">
+            <h2>Serviços de Terceiros</h2>
+            <p>Atualmente, o aplicativo não utiliza redes de anúncios ou ferramentas de análise externas (Analytics) que rastreiem seu comportamento ou dados.</p>
+        </section>
+
+        <section id="contato">
+            <h2>Contato</h2>
+            <p>Se você tiver alguma dúvida sobre esta política, sinta-se à vontade para entrar em contato com o desenvolvedor.</p>
+            <div class="contact-card">
+                <strong>Desenvolvedor:</strong> guiklisman<br>
+                <strong>E-mail:</strong> <a href="mailto:contato@guiklisman.dev" style="color: var(--primary); text-decoration: none;">contato@guiklisman.dev</a>
+            </div>
+        </section>
+
+        <button class="btn-print" onclick="window.print()">Imprimir / Salvar como PDF</button>
+    </main>
+
+    <footer>
+        &copy; 2026 Dev Quiz Fix. Criado com foco em privacidade.
+    </footer>
+</div>
+
+</body>
+</html>

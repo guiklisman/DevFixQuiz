@@ -1,6 +1,6 @@
 import 'package:flutter/material.dart';
 
-class QuizProgressBar extends StatelessWidget {
+class QuizProgressBar extends StatelessWidget implements PreferredSizeWidget {
   final int indiceAtual;
   final int totalPerguntas;
 
@@ -30,7 +30,7 @@ class QuizProgressBar extends StatelessWidget {
             borderRadius: BorderRadius.circular(10),
             child: LinearProgressIndicator(
               value: progresso,
-              backgroundColor: Colors.white.withOpacity(0.2),
+              backgroundColor: Colors.white.withValues(alpha: 0.2),
               valueColor: const AlwaysStoppedAnimation<Color>(
                 Colors.greenAccent,
               ),
@@ -44,10 +44,13 @@ class QuizProgressBar extends StatelessWidget {
           style: TextStyle(
             fontWeight: FontWeight.bold,
             fontSize: 16,
-            color: Colors.white.withOpacity(0.7),
+            color: Colors.white.withValues(alpha: 0.7),
           ),
         ),
       ],
     );
   }
+
+  @override
+  Size get preferredSize => const Size.fromHeight(40);
 }

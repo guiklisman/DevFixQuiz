@@ -8,7 +8,8 @@
       "Extends é exclusivo para classes abstratas",
       "Não há diferença, são sinônimos"
     ],
-    "indiceCorreto": 0
+    "indiceCorreto": 0,
+    "explicacao": "O 'extends' cria uma relação de herança onde você recebe a implementação (código) da classe pai. Já o 'implements' trata a classe como uma interface, obrigando você a reconstruir todos os métodos e campos, permitindo simular herança múltipla de interfaces."
   },
   {
     "id": "clean_arch_01",
@@ -19,7 +20,8 @@
       "Domain layer",
       "External layer"
     ],
-    "indiceCorreto": 2
+    "indiceCorreto": 2,
+    "explicacao": "A 'Domain Layer' é o coração do projeto. Ela deve ser pura Dart, sem dependências de frameworks (como Flutter) ou drivers externos, contendo apenas Entidades e Use Cases que definem o que o app faz."
   },
   {
     "id": "db_hive_01",
@@ -30,7 +32,8 @@
       "Porque só funciona no iOS",
       "Porque não suporta criptografia"
     ],
-    "indiceCorreto": 1
+    "indiceCorreto": 1,
+    "explicacao": "O Hive é um banco NoSQL chave-valor escrito em Dart puro. Ele armazena os dados em um formato binário eficiente e não possui o overhead de parsear comandos SQL complexos, o que o torna ideal para persistência local simples e rápida."
   },
   {
     "id": "di_injectable_01",
@@ -41,7 +44,8 @@
       "Automatizar a Injeção de Dependências via gerador de código",
       "Substituir o MaterialApp"
     ],
-    "indiceCorreto": 2
+    "indiceCorreto": 2,
+    "explicacao": "O Injectable usa anotações (@injectable, @singleton) para gerar automaticamente o código de registro de dependências no GetIt. Isso evita que você precise escrever 'getIt.registerFactory(...)' manualmente para cada classe do projeto."
   },
   {
     "id": "freezed_01",
@@ -52,7 +56,8 @@
       "Garante a imutabilidade dos dados e gera métodos como copyWith e unions",
       "Aumenta o consumo de bateria"
     ],
-    "indiceCorreto": 2
+    "indiceCorreto": 2,
+    "explicacao": "O Freezed facilita a criação de classes imutáveis. Ele gera automaticamente os métodos 'copyWith' (para clonar alterando campos), '==', 'hashCode' e as 'Unions/Sealed Classes', que são fundamentais para gerenciar estados no BLoC/Cubit."
   },
   {
     "id": "cubit_01",
@@ -63,7 +68,8 @@
       "O BLoC não funciona com Widgets de Texto",
       "O Cubit é exclusivo para animações"
     ],
-    "indiceCorreto": 1
+    "indiceCorreto": 1,
+    "explicacao": "O BLoC baseia-se em Eventos (Sink) que são processados para gerar Estados (Stream). O Cubit simplifica isso eliminando a camada de eventos: você chama uma função comum que internamente dispara um 'emit(novoEstado)'."
   },
   {
     "id": "solid_01",
@@ -74,7 +80,8 @@
       "Abstrações (Interfaces)",
       "Variáveis dinâmicas"
     ],
-    "indiceCorreto": 2
+    "indiceCorreto": 2,
+    "explicacao": "Depender de Abstrações permite que você troque a implementação real (ex: trocar Firebase por SQLite) sem precisar alterar a lógica de quem usa a dependência, facilitando testes e manutenção."
   },
   {
     "id": "native_01",
@@ -85,7 +92,8 @@
       "Um widget para listas infinitas",
       "Uma ferramenta de debug visual"
     ],
-    "indiceCorreto": 1
+    "indiceCorreto": 1,
+    "explicacao": "O MethodChannel permite disparar funções no código nativo (Java/Kotlin no Android ou Swift/Objective-C no iOS) a partir do Dart e receber o resultado de volta, permitindo acessar APIs do sistema que o Flutter não expõe diretamente."
   },
   {
     "id": "notif_01",
@@ -96,7 +104,8 @@
       "repeatDailyForever",
       "ScheduleTask"
     ],
-    "indiceCorreto": 1
+    "indiceCorreto": 1,
+    "explicacao": "Usar 'matchDateTimeComponents: DateTimeComponents.time' no método 'zonedSchedule' garante que a notificação será disparada sempre que o relógio atingir aquela hora e minuto específicos, repetindo-se diariamente."
   },
   {
     "id": "lifecycle_01",
@@ -107,7 +116,8 @@
       "paused",
       "detached"
     ],
-    "indiceCorreto": 2
+    "indiceCorreto": 2,
+    "explicacao": "'paused' significa que o app não está visível e não está processando frames. 'inactive' ocorre na transição (ex: abrir a central de notificações), e 'resumed' é quando o app está no foco principal."
   },
   {
     "id": "clean_arch_02",
@@ -118,7 +128,8 @@
       "Porque o Flutter exige interfaces para compilar",
       "Para aumentar a velocidade do app"
     ],
-    "indiceCorreto": 1
+    "indiceCorreto": 1,
+    "explicacao": "Ao definir o contrato do Repositório no Domain, garantimos que a lógica de negócio dite 'o que' precisa ser feito, enquanto a camada de Data decide 'como' (usando Dio, Hive, ou Mock para testes)."
   },
   {
     "id": "dart_opp_02",
@@ -129,7 +140,8 @@
       "Sim, mas apenas em classes do tipo Mixin",
       "Apenas se as classes forem da mesma pasta"
     ],
-    "indiceCorreto": 1
+    "indiceCorreto": 1,
+    "explicacao": "Diferente da herança de classe (extends), que é única, o Dart permite implementar múltiplas interfaces. Isso é útil para compor comportamentos diferentes sem criar hierarquias rígidas."
   },
   {
     "id": "patt_01",
@@ -140,7 +152,8 @@
       "Gerenciar a navegação entre telas",
       "Calcular animações físicas"
     ],
-    "indiceCorreto": 1
+    "indiceCorreto": 1,
+    "explicacao": "O Repositório decide se busca dados na internet ou no cache local. O restante do aplicativo (ViewModel/BLoC) apenas solicita os dados, sem saber de onde eles vêm exatamente."
   },
   {
     "id": "notif_02",
@@ -151,7 +164,8 @@
       "O histórico do quiz é apagado",
       "Aumenta o volume do celular"
     ],
-    "indiceCorreto": 1
+    "indiceCorreto": 1,
+    "explicacao": "Limpar as notificações ao retornar ao app evita que o usuário continue vendo lembretes de 'volta para o app' quando ele já está usando o aplicativo ativamente."
   },
   {
     "id": "dart_mixin_01",
@@ -162,7 +176,8 @@
       "Para criar bancos de dados NoSQL",
       "Para substituir o uso de Widgets"
     ],
-    "indiceCorreto": 1
+    "indiceCorreto": 1,
+    "explicacao": "Mixins permitem que você 'injete' métodos e comportamentos em classes de hierarquias diferentes. Se várias classes precisam de uma função 'log()', elas podem apenas usar o mixin em vez de herdar de uma classe pai comum."
   },
   {
     "id": "dart_mixin_02",
@@ -173,7 +188,8 @@
       "with",
       "mixin"
     ],
-    "indiceCorreto": 2
+    "indiceCorreto": 2,
+    "explicacao": "Usamos a palavra-chave 'with' seguida do nome do mixin. Exemplo: 'class MyController extends BaseController with MyLogger {}'."
   },
   {
     "id": "dart_mixin_03",
@@ -184,7 +200,8 @@
       "Restringe quais classes podem usar aquele mixin",
       "Ativa o modo debug"
     ],
-    "indiceCorreto": 2
+    "indiceCorreto": 2,
+    "explicacao": "O 'on' impõe que o mixin só pode ser usado por classes que herdam de um tipo específico. Isso permite que o mixin acesse métodos e propriedades dessa classe base (como o Context em um Mixin para Widgets)."
   },
   {
     "id": "dart_oop_03",
@@ -195,7 +212,8 @@
       "Você é obrigado a sobrescrever todos os métodos, ignorando o código original",
       "Nada acontece, o Dart ignora o implements"
     ],
-    "indiceCorreto": 2
+    "indiceCorreto": 2,
+    "explicacao": "No Dart, cada classe define implicitamente uma interface. Quando você dá 'implements' em uma classe concreta, o Dart ignora a lógica interna dela e trata apenas suas assinaturas de métodos como um contrato vazio que você DEVE preencher."
   },
   {
     "id": "dart_oop_04",
@@ -206,7 +224,8 @@
       "Ela consome menos memória RAM",
       "Ela permite criar variáveis globais"
     ],
-    "indiceCorreto": 0
+    "indiceCorreto": 0,
+    "explicacao": "Classes abstratas são ideais para contratos porque forçam os desenvolvedores a criar implementações concretas, impedindo o erro de tentar usar um objeto 'meio pronto' ou puramente genérico."
   },
   {
     "id": "dart_mixin_05",
@@ -217,7 +236,8 @@
       "Apenas se as classes forem abstratas",
       "Sim, mas apenas no iOS"
     ],
-    "indiceCorreto": 1
+    "indiceCorreto": 1,
+    "explicacao": "Você pode encadear diversos mixins: 'class X with MixinA, MixinB, MixinC {}'. A ordem importa: se MixinB e MixinC tiverem um método com o mesmo nome, o método do último (MixinC) prevalecerá."
   },
   {
     "id": "di_injectable_02",
@@ -228,7 +248,8 @@
       "Singleton só funciona com Widgets",
       "Não há diferença funcional"
     ],
-    "indiceCorreto": 0
+    "indiceCorreto": 0,
+    "explicacao": "O '@singleton' é instanciado assim que o GetIt é configurado. O '@lazySingleton' economiza memória e tempo de inicialização, pois só cria o objeto quando alguém chama 'getIt<T>()' pela primeira vez."
   },
   {
     "id": "clean_arch_03",
@@ -239,7 +260,8 @@
       "Para diminuir o tamanho do arquivo",
       "Porque o Domain só aceita arquivos .txt"
     ],
-    "indiceCorreto": 1
+    "indiceCorreto": 1,
+    "explicacao": "O Domain deve conter apenas a lógica pura do negócio. Se você precisar trocar de framework (ex: mudar para Dart pura no servidor) ou trocar o `http` pelo `dio`, o Domain permanecerá intacto."
   },
   {
     "id": "clean_arch_04",
@@ -250,7 +272,8 @@
       "São os modelos de animação",
       "São arquivos de configuração do Git"
     ],
-    "indiceCorreto": 1
+    "indiceCorreto": 1,
+    "explicacao": "O Data Source é o nível mais baixo da comunicação com dados. Ele lida com as particularidades de cada fonte (ex: tratar status codes do HTTP ou queries do SQLite) e devolve Models para o Repositório."
   },
   {
     "id": "freezed_03",
@@ -261,7 +284,8 @@
       "Para criar loops infinitos",
       "Para substituir o Navigator"
     ],
-    "indiceCorreto": 1
+    "indiceCorreto": 1,
+    "explicacao": "Usar Unions permite que o compilador te obrigue a tratar todos os estados possíveis na UI (ex: usando .when() ou .maybeWhen()), eliminando bugs de estados esquecidos ou mal controlados."
   },
   {
     "id": "cubit_02",
@@ -272,7 +296,8 @@
       "O BlocListener é apenas para erros",
       "Sempre use o BlocBuilder por padrão"
     ],
-    "indiceCorreto": 1
+    "indiceCorreto": 1,
+    "explicacao": "O BlocBuilder serve para construir a árvore de widgets baseada no estado. O BlocListener é focado em 'efeitos colaterais' que devem ocorrer apenas uma vez por transição de estado, evitando disparar 5 dialogs em um rebuild."
   },
   {
     "id": "error_func_01",
@@ -283,7 +308,8 @@
       "Um comando do Git",
       "Uma animação de transição"
     ],
-    "indiceCorreto": 1
+    "indiceCorreto": 1,
+    "explicacao": "O Either substitui o 'try-catch' solto, forçando o programador a lidar com o cenário de erro logo na saída da função. Por convenção, o lado 'Left' (Esquerda) traz o erro e o 'Right' (Direita) traz o dado de sucesso."
   },
   {
     "id": "dart_stream_01",
@@ -294,7 +320,8 @@
       "Ele é mais lento que o Future",
       "Ele desliga o Bluetooth do celular"
     ],
-    "indiceCorreto": 1
+    "indiceCorreto": 1,
+    "explicacao": "Streams normais (single-subscription) estouram erro se você tentar ouvir em dois lugares. O Broadcast é projetado para eventos que muitos widgets podem estar interessados em 'ouvir' ao mesmo tempo."
   },
   {
     "id": "solid_iso_01",
@@ -305,7 +332,8 @@
       "Interfaces devem ser privadas",
       "Todas as classes devem ser interfaces"
     ],
-    "indiceCorreto": 1
+    "indiceCorreto": 1,
+    "explicacao": "É melhor ter várias interfaces pequenas e específicas do que uma única interface genérica que obriga uma classe a implementar métodos 'em branco' ou lançar erros de 'not implemented'."
   },
   {
     "id": "perf_const_01",
@@ -316,7 +344,8 @@
       "Faz o app carregar mais rápido na loja",
       "O const é apenas estético"
     ],
-    "indiceCorreto": 0
+    "indiceCorreto": 0,
+    "explicacao": "Widgets constantes são criados em tempo de compilação. Em tempo de execução, o Flutter reutiliza a mesma instância na memória sempre que possível, pulando o trabalho pesado de recriar e re-layoutar o widget."
   },
   {
     "id": "async_wait_01",
@@ -327,7 +356,8 @@
       "Não usar Future",
       "Reiniciar o app a cada carga"
     ],
-    "indiceCorreto": 1
+    "indiceCorreto": 1,
+    "explicacao": "O 'Future.wait([])' dispara as requisições quase simultaneamente e aguarda o retorno de todas. Isso reduz drasticamente o tempo total de carregamento comparado ao 'await' individual sequencial."
   },
   {
     "id": "debug_lint_01",
@@ -338,7 +368,8 @@
       "Para gerenciar pacotes",
       "Para salvar segredos de API"
     ],
-    "indiceCorreto": 1
+    "indiceCorreto": 1,
+    "explicacao": "O Linter analisa seu código e aponta erros comuns ou falta de padronização (ex: faltou const). O configuration file define o quão rígidas serão essas regras para o seu projeto."
   },
   {
     "id": "native_perm_01",
@@ -349,7 +380,8 @@
       "AndroidManifest.xml",
       "styles.xml"
     ],
-    "indiceCorreto": 2
+    "indiceCorreto": 2,
+    "explicacao": "O AndroidManifest é o arquivo de metadados principal do Android. Sem registrar a permissão lá, o sistema operacional bloqueará a tentativa do app de acessar recursos protegidos, mesmo que o código Dart esteja correto."
   },
   {
     "id": "flutter_key_01",
@@ -360,7 +392,8 @@
       "Para bloquear o toque na tela",
       "Para salvar o item no banco"
     ],
-    "indiceCorreto": 1
+    "indiceCorreto": 1,
+    "explicacao": "Sem keys, o Flutter pode se confundir ao reordenar ou deletar itens de uma lista, achando que o widget antigo ainda deve ser usado para o novo dado. A ValueKey garante a 'identidade' única do widget."
   },
   {
     "id": "dart_ffi_01",
@@ -371,7 +404,8 @@
       "Substituir o Firebase",
       "Gerenciar o estado do Cubit"
     ],
-    "indiceCorreto": 0
+    "indiceCorreto": 0,
+    "explicacao": "O FFI (Foreign Function Interface) permite que o Dart converse diretamente com bibliotecas de baixo nível. Isso é muito mais rápido que o MethodChannel para processamentos pesados ou bibliotecas legadas de C."
   },
   {
     "id": "clean_arch_ent_01",
@@ -382,7 +416,8 @@
       "É o arquivo JSON de perguntas",
       "É o ícone do aplicativo"
     ],
-    "indiceCorreto": 1
+    "indiceCorreto": 1,
+    "explicacao": "Entidades são o 'Business Logic' mais puro. Elas definem os dados e regras que não mudariam mesmo se você decidisse criar o app para Web ou Mobile."
   },
   {
     "id": "isolate_01",
@@ -393,7 +428,8 @@
       "Para navegar entre telas",
       "Para mudar a cor do botão"
     ],
-    "indiceCorreto": 1
+    "indiceCorreto": 1,
+    "explicacao": "O Dart é single-threaded. Tarefas muito pesadas (como parsear um JSON gigante) podem 'travar' a tela por milissegundos. Isolates rodam em threads separadas, mantendo a animação fluida."
   },
   {
     "id": "solid_liskov_01",
@@ -404,7 +440,8 @@
       "O app não pode ter herança",
       "Tudo deve ser mixin"
     ],
-    "indiceCorreto": 0
+    "indiceCorreto": 0,
+    "explicacao": "Se você tem uma função que recebe 'Passaro', ela deve funcionar se você passar qualquer filho (ex: 'Sabiá', 'Canário'). Se ela quebrar ao receber um 'Pingüim' (porque pingüim não voa mas herda de voador), você violou o LSP."
   },
   {
     "id": "method_limit_01",
@@ -415,7 +452,8 @@
       "Não aceita listas",
       "É exclusivo para Android"
     ],
-    "indiceCorreto": 1
+    "indiceCorreto": 1,
+    "explicacao": "Como o MethodChannel usa nomes de strings para chamar funções, é fácil errar a digitação e só descobrir em tempo de execução. Ferramentas como o Pigeon ajudam a gerar código tipado para esses canais."
   },
   {
     "id": "repository_adv_01",
@@ -426,7 +464,8 @@
       "O Flutter exige mocks para compilar",
       "Diminuir o número de arquivos de teste"
     ],
-    "indiceCorreto": 1
+    "indiceCorreto": 1,
+    "explicacao": "Testes devem ser determinísticos. Mockando o repositório, você pode testar como sua ViewModel lida com um erro de rede ou com dados vazios sem precisar desligar o Wi-Fi do computador."
   },
   {
     "id": "dart_try_catch_01",
@@ -437,7 +476,8 @@
       "Dar um 'print' apenas",
       "Usar apenas 'if (error != null)' em variáveis globais"
     ],
-    "indiceCorreto": 1
+    "indiceCorreto": 1,
+    "explicacao": "Tratar erros de forma robusta garante que o app mostre uma mensagem amigável ou tente uma nova carga em vez de travar ('Red Screen of Death') na frente do usuário."
   },
   {
     "id": "test_theory_01",
@@ -448,7 +488,8 @@
       "Teste que roda o app inteiro no emulador",
       "Teste exclusivo para as cores da interface"
     ],
-    "indiceCorreto": 1
+    "indiceCorreto": 1,
+    "explicacao": "Testes de unidade são a fundação da pirâmide de testes. Eles são rápidos, baratos de escrever e garantem que as menores peças do seu sistema funcionem corretamente."
   },
   {
     "id": "test_theory_02",
@@ -459,7 +500,8 @@
       "Integration Test é apenas para bancos de dados",
       "Não há diferença"
     ],
-    "indiceCorreto": 0
+    "indiceCorreto": 0,
+    "explicacao": "Widget Tests não rodam em um device real (usan o ambiente simulado do Flutter), sendo muito velozes. Integration Tests rodam no emulador/físico, testando o fluxo de ponta a ponta (E2E)."
   },
   {
     "id": "test_mock_01",
@@ -470,7 +512,8 @@
       "Uma ferramenta de design",
       "O banco de dados de produção"
     ],
-    "indiceCorreto": 1
+    "indiceCorreto": 1,
+    "explicacao": "O Mock permite 'fingir' que uma API retornou 404, por exemplo. Isso testa a resiliência do seu código sem precisar de uma infraestrutura real rodando naquele momento."
   },
   {
     "id": "test_tdd_01",
@@ -481,7 +524,8 @@
       "Design -> Code -> Debug",
       "Sempre escrever o teste por último"
     ],
-    "indiceCorreto": 1
+    "indiceCorreto": 1,
+    "explicacao": "No TDD você escreve o teste ANTES do código. O ciclo força você a pensar na simplicidade do código (Green) e na qualidade da estrutura (Refactor) constantemente."
   },
   {
     "id": "test_flutter_01",
@@ -492,7 +536,8 @@
       "Para enviar dados para a internet",
       "Para formatar o código"
     ],
-    "indiceCorreto": 1
+    "indiceCorreto": 1,
+    "explicacao": "Ambientes de teste não rodam a 60 FPS automáticos. Você precisa 'bombear' (pump) o framework manualmente para que ele sinta a mudança de estado e redesenhe a tela para sua verificação."
   },
   {
     "id": "test_flutter_02",
@@ -503,7 +548,8 @@
       "Future.delayed()",
       "tester.wait()"
     ],
-    "indiceCorreto": 1
+    "indiceCorreto": 1,
+    "explicacao": "O `pumpAndSettle` chama o `pump` repetidamente até que não haja mais animações agendadas. É ideal para esperar transitions de páginas ou botões que piscam."
   },
   {
     "id": "test_coverage_01",
@@ -514,7 +560,8 @@
       "O número de downloads na loja",
       "O tamanho final do APK"
     ],
-    "indiceCorreto": 1
+    "indiceCorreto": 1,
+    "explicacao": "Uma alta cobertura traz confiança, mas não é tudo. Ela apenas garante que as linhas foram 'tocadas', não garantindo que todas as condições lógicas foram validadas."
   },
   {
     "id": "test_mock_02",
@@ -525,7 +572,8 @@
       "Não há diferença",
       "thenAnswer é exclusivo para inteiros"
     ],
-    "indiceCorreto": 0
+    "indiceCorreto": 0,
+    "explicacao": "Se o método retorna um Future, você deve usar `thenAnswer((_) async => ...)` para simular o delay ou retorno assíncrono real que acontece na rede."
   },
   {
     "id": "test_groups_01",
@@ -536,7 +584,8 @@
       "Para rodar testes em paralelo",
       "Para compartilhar o app com amigos"
     ],
-    "indiceCorreto": 1
+    "indiceCorreto": 1,
+    "explicacao": "Grupos ajudam na leitura do log de erros. Você pode agrupar 'Sucessos', 'Erros de Rede' e 'Erros de Autenticação' separadamente no mesmo arquivo."
   },
   {
     "id": "test_gold_01",
@@ -547,6 +596,487 @@
       "Teste de segurança contra hackers",
       "Teste de bateria"
     ],
-    "indiceCorreto": 1
+    "indiceCorreto": 1,
+    "explicacao": "Golden tests pegam pixels individuais e comparam com um arquivo .png mestre. Se um botão mudar de cor ou posição por erro, o Golden Test falhará mesmo que a lógica esteja correta."
+  },
+  {
+    "id": "dart_poo_21",
+    "pergunta": "Qual a diferença principal entre usar 'extends Animal' vs 'implements Animal' em uma classe Dart?",
+    "opcoes": [
+      "extends herda implementação; implements exige reimplementação completa",
+      "implements permite múltiplas heranças de classes concretas",
+      "extends só funciona com abstract classes",
+      "Ambos fazem a mesma coisa em runtime"
+    ],
+    "indiceCorreto": 0,
+    "explicacao": "No Dart, 'extends' cria herança (especialização), enquanto 'implements' trata qualquer classe como uma Interface (contrato), exigindo que você defina novamente cada campo e método manualmente."
+  },
+  {
+    "id": "dart_poo_22",
+    "pergunta": "O que acontece quando você usa 'implements' em uma abstract class com métodos implementados?",
+    "opcoes": [
+      "Herda automaticamente os métodos implementados",
+      "Deve sobrescrever TODOS os métodos (mesmo os implementados)",
+      "Só herda os métodos abstract",
+      "Compilador ignora a implementação da abstract"
+    ],
+    "indiceCorreto": 1,
+    "explicacao": "Lembre-se: 'implements' vê apenas o contrato (as assinaturas). Mesmo que a classe pai tenha lógica pronta, o Dart ignora esse código e obriga você a reimplementar tudo."
+  },
+  {
+    "id": "dart_poo_23",
+    "pergunta": "Qual palavra-chave aplica múltiplos mixins em uma classe Dart?",
+    "opcoes": [
+      "implements Mixin1, Mixin2",
+      "extends Mixin1 with Mixin2",
+      "with Mixin1, Mixin2",
+      "mixin Mixin1, Mixin2"
+    ],
+    "indiceCorreto": 2,
+    "explicacao": "A palavra-chave 'with' é usada para o 'mix-in' de funcionalidades. Você pode adicionar quantas quiser separando por vírgulas após o 'extends' ou nome da classe."
+  },
+  {
+    "id": "dart_poo_24",
+    "pergunta": "O que o modificador 'on' faz em um mixin declaration?",
+    "opcoes": [
+      "Executa o mixin apenas em debug mode",
+      "Restringe quais classes podem usar esse mixin",
+      "Torna o mixin singleton",
+      "Permite herança múltipla de código"
+    ],
+    "indiceCorreto": 1,
+    "explicacao": "O modificador 'on' restringe o uso do mixin. Por exemplo, 'mixin Logic on MyBase {}' só pode ser usado por classes que já herdam de 'MyBase'."
+  },
+  {
+    "id": "dart_poo_25",
+    "pergunta": "Qual é o comportamento correto de conflitos entre múltiplos mixins?",
+    "opcoes": [
+      "Dart resolve automaticamente pelo último mixin",
+      "Compilação falha - deve usar @override explícito",
+      "Primeiro mixin sempre prevalece",
+      "Runtime exception"
+    ],
+    "indiceCorreto": 1,
+    "explicacao": "Se dois mixins têm o mesmo método, o Dart gera um erro de conflito ou herda do último. Para resolver, você deve sobrescrever o método na classe final e usar 'super.metodo()' se quiser indicar qual mixin chamar."
+  },
+  {
+    "id": "dart_poo_26",
+    "pergunta": "Em Dart, uma factory constructor pode ser qual tipo?",
+    "opcoes": [
+      "Apenas const constructor",
+      "Named constructor que retorna instância ou null",
+      "Static method que retorna Future<T>",
+      "Constructor que sempre chama super()"
+    ],
+    "indiceCorreto": 1,
+    "explicacao": "'factory' permite decidir se retorna uma nova instância, uma instância em cache ou até uma subclasse. Ela não cria necessariamente o objeto na hora, apenas 'produz' um."
+  },
+  {
+    "id": "dart_poo_27",
+    "pergunta": "Qual princípio SOLID viola criar uma classe que implementa múltiplas responsabilidades?",
+    "opcoes": [
+      "Single Responsibility Principle (SRP)",
+      "Open/Closed Principle (OCP)",
+      "Liskov Substitution Principle (LSP)",
+      "Interface Segregation Principle (ISP)"
+    ],
+    "indiceCorreto": 0,
+    "explicacao": "O SRP prega que uma classe deve ter apenas uma razão para mudar. Se ela lida com banco de dados E lógica de UI, ela tem duas responsabilidades distintas."
+  },
+  {
+    "id": "clean_mvvm_01",
+    "pergunta": "No MVVM do Flutter, qual classe tipicamente expõe um Stream para a View?",
+    "opcoes": [
+      "Model",
+      "ViewModel",
+      "View",
+      "Repository"
+    ],
+    "indiceCorreto": 1,
+    "explicacao": "O ViewModel atua como a ponte. Ele processa dados do Model/Repository e expõe o estado de forma reativa (Stream, ValueNotifier ou ChangeNotifier) para a View observar."
+  },
+  {
+    "id": "clean_mvvm_02",
+    "pergunta": "Na Clean Architecture, qual camada NÃO deve conhecer a existência do Dio HTTP client?",
+    "opcoes": [
+      "Data layer",
+      "Domain layer",
+      "Presentation layer",
+      "Todas conhecem"
+    ],
+    "indiceCorreto": 1,
+    "explicacao": "O 'Domain' deve ser agnóstico a ferramentas. O Dio é uma ferramenta da camada de 'Data' ou 'Infrastruture'. O Domain conhece apenas o contrato de interface."
+  },
+  {
+    "id": "mvc_flutter_01",
+    "pergunta": "No padrão MVC tradicional adaptado para Flutter, qual componente atualiza o Controller?",
+    "opcoes": [
+      "Model",
+      "View",
+      "Controller atualiza ambos",
+      "Service layer"
+    ],
+    "indiceCorreto": 1,
+    "explicacao": "No MVC, a View envia as interações do usuário (toques, texto) para o Controller, que então decide como atualizar o Model e, consequentemente, a View."
+  },
+  {
+    "id": "bloc_clean_01",
+    "pergunta": "Em Clean Arch + BLoC, onde ficam os Use Cases (casos de uso)?",
+    "opcoes": [
+      "Presentation layer (BLoC)",
+      "Domain layer",
+      "Data layer",
+      "Shared folder"
+    ],
+    "indiceCorreto": 1,
+    "explicacao": "Use Cases encapsulam regras de negócio específicas da aplicação e residem obrigatoriamente na camada de 'Domain'."
+  },
+  {
+    "id": "injectable_adv_01",
+    "pergunta": "Qual anotação Injectable cria instância única só no primeiro get()?",
+    "opcoes": [
+      "@singleton",
+      "@lazySingleton",
+      "@factory",
+      "@preResolve"
+    ],
+    "indiceCorreto": 1,
+    "explicacao": "'Lazy' (Preguiçoso) indica que a criação só ocorre sob demanda, economizando processamento no startup do app."
+  },
+  {
+    "id": "dart_generic_01",
+    "pergunta": "Qual é a sintaxe correta para uma generic class que restrinja T a numérico?",
+    "opcoes": [
+      "class Math<T extends num>",
+      "class Math<T: num>",
+      "class Math<T where T is num>",
+      "class Math<num T>"
+    ],
+    "indiceCorreto": 0,
+    "explicacao": "Restrições de generics no Dart usam a palavra 'extends'. Isso garante que o tipo T possua os métodos e propriedades de 'num' (int/double)."
+  },
+  {
+    "id": "dart_extension_01",
+    "pergunta": "Qual o principal uso de Extensions em Dart?",
+    "opcoes": [
+      "Adicionar métodos estáticos a classes existentes sem herança",
+      "Criar herança múltipla",
+      "Substituir mixins",
+      "Fazer private methods públicas"
+    ],
+    "indiceCorreto": 0,
+    "explicacao": "Extensions permitem dar poderes a classes de terceiros ou nativas (ex: adicionar .toCurrency() em uma String) de forma limpa e sem ferir o encapsulamento."
+  },
+  {
+    "id": "solid_lsp_01",
+    "pergunta": "Violação do Liskov Substitution Principle (LSP):",
+    "opcoes": [
+      "Classe filha lança exception que pai não lança",
+      "Classe filha tem mais métodos que pai",
+      "Classe filha é mais rápida que pai",
+      "Classe filha usa mais memória"
+    ],
+    "indiceCorreto": 0,
+    "explicacao": "O LSP diz que filhos devem ser substituíveis por pais sem surpresas. Lançar uma exceção inesperada para o contrato do pai é uma quebra desse contrato lógico."
+  },
+  {
+    "id": "abstract_vs_interface_01",
+    "pergunta": "Qual a VANTAGEM de usar abstract class ao invés de interface pura?",
+    "opcoes": [
+      "Shared implementation entre implementers",
+      "Múltipla herança",
+      "Menos código boilerplate",
+      "Melhor performance em runtime"
+    ],
+    "indiceCorreto": 0,
+    "explicacao": "Se você tem lógica comum que se repete em todos os filhos, uma abstract class permite escrever esse código uma única vez (herança), enquanto a interface forçaria a repetição em cada classe."
+  },
+  {
+    "id": "dart_record_01",
+    "pergunta": "Qual a sintaxe Dart para criar um record com named fields?",
+    "opcoes": [
+      "(int id, String name)",
+      "({int id, String name})",
+      "(id: int, name: String)",
+      "record<int, String>"
+    ],
+    "indiceCorreto": 1,
+    "explicacao": "A sintaxe de named fields em Records é idêntica à de parâmetros nomeados em funções: envoltos por chaves `{}` dentro do parêntese."
+  },
+  {
+    "id": "patterns_01",
+    "pergunta": "No Repository Pattern + Clean Arch, qual retorna Either<Failure, T>?",
+    "opcoes": [
+      "DataSource",
+      "Repository",
+      "UseCase",
+      "Controller"
+    ],
+    "indiceCorreto": 1,
+    "explicacao": "Geralmente é no Repository que capturamos as diversas exceções da camada de Data e as mapeamos para objetos de 'Failure' tipados, devolvendo um Either para o UseCase."
+  },
+  {
+    "id": "dart_sealed_01",
+    "pergunta": "Qual anotação Freezed cria unions tipadas (Loading|Success|Error)?",
+    "opcoes": [
+      "@freezed",
+      "@sealed",
+      "@union",
+      "@immutable"
+    ],
+    "indiceCorreto": 0,
+    "explicacao": "O '@freezed' associado a múltiplos named constructors gera classes do tipo Union que facilitam muito o controle de estados reativos."
+  },
+  {
+    "id": "dart_nullsafety_01",
+    "pergunta": "Qual operador permite chamar método em nullable SEM if null check?",
+    "opcoes": [
+      "?. ",
+      "!. ",
+      "?.. ",
+      "$? "
+    ],
+    "indiceCorreto": 0,
+    "explicacao": "O operador 'conditional member access' (`?.`) aborta a chamada e retorna null imediatamente se o objeto for nulo, evitando o erro de pointer."
+  },
+  {
+    "id": "lifecycle_senior_01",
+    "pergunta": "Qual AppLifecycleState NÃO pausa timers e animações, mas ainda responde a interações?",
+    "opcoes": [
+      "paused",
+      "inactive",
+      "resumed",
+      "detached"
+    ],
+    "indiceCorreto": 1,
+    "explicacao": "'inactive' ocorre quando o app perde o foco visual mas ainda está visível (ex: dividindo tela ou atendendo chamada), permitindo manter animações leves ativas."
+  },
+  {
+    "id": "lifecycle_senior_02",
+    "pergunta": "Em 'detached', qual recurso ainda está disponível mas o app pode ser destruído a qualquer momento?",
+    "opcoes": [
+      "Render tree",
+      "Isolate do Dart VM",
+      "Platform threads",
+      "Nenhum - tudo é liberado"
+    ],
+    "indiceCorreto": 1,
+    "explicacao": "'detached' é o estado onde o engine do Flutter ainda existe mas a view foi removida. O código Dart (Isolate) pode continuar rodando por um breve período de limpeza."
+  },
+  {
+    "id": "lifecycle_senior_03",
+    "pergunta": "Qual evento indica que o app voltou do background para foreground (mas não necessariamente visível)?",
+    "opcoes": [
+      "resumed → inactive",
+      "paused → resumed",
+      "inactive → paused",
+      "detached → inactive"
+    ],
+    "indiceCorreto": 1,
+    "explicacao": "Quando o usuário traz o app de volta, ele passa de `paused` (onde estava congelado) para `resumed`."
+  },
+  {
+    "id": "tdd_senior_01",
+    "pergunta": "No ciclo TDD Red-Green-Refactor, qual fase permite melhorar código SEM quebrar testes?",
+    "opcoes": [
+      "Red",
+      "Green",
+      "Refactor",
+      "Todas"
+    ],
+    "indiceCorreto": 2,
+    "explicacao": "Refatorar com segurança é a grande promessa do TDD. Já que você tem um teste que passa (Green), você pode renomear e organizar o código com a garantia de que não inseriu bugs lógicos."
+  },
+  {
+    "id": "tdd_senior_02",
+    "pergunta": "Qual métrica além de coverage é CRÍTICA para avaliar qualidade de testes unitários?",
+    "opcoes": [
+      "Mutation Testing Score",
+      "Number of assertions",
+      "Test execution time",
+      "Number of test files"
+    ],
+    "indiceCorreto": 0,
+    "explicacao": "Mutation Testing altera seu código propositalmente e vê se os testes falham. Se o código muda e o teste continua passando, significa que o teste é fraco e não valida o comportamento real."
+  },
+  {
+    "id": "perf_senior_01",
+    "pergunta": "Qual causa PRINCIPAL de jank em ListView com 1000+ items?",
+    "opcoes": [
+      "setState() no build",
+      "Não usar const constructors",
+      "ListView sem itemExtent",
+      "Todas acima"
+    ],
+    "indiceCorreto": 3,
+    "explicacao": "Performance em listas exige: itemExtent (para evitar cálculos de altura de cada item), const constructors e evitar lógica pesada dentro do builder."
+  },
+  {
+    "id": "perf_senior_02",
+    "pergunta": "Qual técnica evita rebuild desnecessário em árvore profunda de widgets?",
+    "opcoes": [
+      "ValueNotifier + Selector",
+      "Provider.of(context, listen: false)",
+      "Consumer com seletor",
+      "InheritedWidget custom"
+    ],
+    "indiceCorreto": 2,
+    "explicacao": "O `Selector` (ou `Consumer` seletivo) permite observar apenas uma parte específica do estado, impedindo que mudanças em outros campos disparem rebuilds no widget atual."
+  },
+  {
+    "id": "riverpod_senior_01",
+    "pergunta": "Qual Provider refetch dados automaticamente quando dependências mudam?",
+    "opcoes": [
+      "StateProvider",
+      "FutureProvider.autoDispose",
+      "StreamProvider.family",
+      "StateNotifierProvider"
+    ],
+    "indiceCorreto": 2,
+    "explicacao": "Providers do Riverpod são reativos por natureza. O `StreamProvider` re-executa sua lógica toda vez que o input (parameters) ou as dependências injetadas nele emitem novos valores."
+  },
+  {
+    "id": "isolate_senior_01",
+    "pergunta": "Quando compute() falha com 'Invalid argument(s)', qual é a causa comum?",
+    "opcoes": [
+      "Função não é top-level ou static",
+      "Dados > 1GB",
+      "Isolate spawn timeout",
+      "Main thread bloqueada"
+    ],
+    "indiceCorreto": 0,
+    "explicacao": "O `compute` isola a execução em outra thread. Para isso, o Dart precisa conseguir 'serializar' e enviar a função para o novo isolate, o que exige que ela seja uma função global ou estática."
+  },
+  {
+    "id": "methodchannel_senior_01",
+    "pergunta": "Qual problema do MethodChannel PODE ser resolvido com Pigeon?",
+    "opcoes": [
+      "Type safety em argumentos",
+      "Performance de chamadas",
+      "Thread blocking",
+      "Battery drain"
+    ],
+    "indiceCorreto": 0,
+    "explicacao": "O Pigeon gera o boilerplate de comunicação nativa em ambas as pontas (Dart/Java/Swift), garantindo que os tipos de dados passados sejam conferidos pelo compilador, evitando erros de digitação."
+  },
+  {
+    "id": "freezed_union_01",
+    "pergunta": "Qual método gerado por Freezed permite pattern matching em unions?",
+    "opcoes": [
+      "when() / maybeWhen()",
+      "fold()",
+      "map()",
+      "Todos acima"
+    ],
+    "indiceCorreto": 3,
+    "explicacao": "Freezed gera diversas utilidades funcionais. `when` mapeia valores, `map` mapeia funções e `fold` é o nome clássico da programação funcional para reduzir a união."
+  },
+  {
+    "id": "equatable_senior_01",
+    "pergunta": "Por que Equatable::props() deve listar APENAS campos relevantes para ==?",
+    "opcoes": [
+      "Performance no hashCode",
+      "Evitar falsos positivos em ==",
+      "Ambos",
+      "Nenhum impacto"
+    ],
+    "indiceCorreto": 2,
+    "explicacao": "Calcular hashCode é custoso. Além disso, se você incluir um ID randômico que muda sempre, o `Equatable` achará que o objeto é sempre diferente, mesmo que os dados reais sejam iguais."
+  },
+  {
+    "id": "zone_senior_01",
+    "pergunta": "Qual callback Zone executa QUANDO uma Future completa (success ou error)?",
+    "opcoes": [
+      "runUnary",
+      "scheduleMicrotask",
+      "handleUncaughtError",
+      "registerCallback"
+    ],
+    "indiceCorreto": 2,
+    "explicacao": "Zonas permitem capturar erros de Futures que não foram pegos por try-catch. Isso é fundamental para bibliotecas de Crashlytics detectarem erros assíncronos 'soltos'."
+  },
+  {
+    "id": "solid_isp_senior_01",
+    "pergunta": "Violação ISP: classe forced a implementar métodos que nunca usa. Solução?",
+    "opcoes": [
+      "Split interface em menores",
+      "Usar abstract class",
+      "Duck typing",
+      "Runtime checks"
+    ],
+    "indiceCorreto": 0,
+    "explicacao": "A segregação de interfaces recomenda que contratos sejam enxutos. Se sua interface tem 'pagar()' e 'devolver()', mas uma classe só pode 'pagar()', divida-as em IGenericPay e IRefundable."
+  },
+  {
+    "id": "git_senior_flutter_01",
+    "pergunta": "Qual git command resolve conflitos de generated files (build_runner)?",
+    "opcoes": [
+      "git checkout --ours lib/*.g.dart",
+      "delete e rodar build_runner",
+      "git mergetool",
+      "git reset --hard"
+    ],
+    "indiceCorreto": 1,
+    "explicacao": "Arquivos '.g.dart' são gerados. Nunca gaste tempo resolvendo conflitos neles manualmente; basta deletar e pedir para o linter/gerador criá-los de novo baseados no código atual."
+  },
+  {
+    "id": "android_senior_01",
+    "pergunta": "Qual permission Android é requerida para foreground service com notificação?",
+    "opcoes": [
+      "POST_NOTIFICATIONS (API 33+)",
+      "FOREGROUND_SERVICE",
+      "VIBRATE",
+      "Todas acima"
+    ],
+    "indiceCorreto": 3,
+    "explicacao": "Aplicações modernas exigem permissão explícita para mostrar notificações e para rodar serviços em primeiro plano, garantindo transparência ao usuário sobre o uso de recursos."
+  },
+  {
+    "id": "ios_senior_01",
+    "pergunta": "Qual Info.plist key habilita background fetch em iOS?",
+    "opcoes": [
+      "UIBackgroundModes = fetch",
+      "BGTaskSchedulerPermittedIdentifiers",
+      "enableBackgroundModes",
+      "backgroundAppRefresh"
+    ],
+    "indiceCorreto": 0,
+    "explicacao": "O iOS é muito rígido com background. Sem a chave correta no `Info.plist`, o sistema matará o app assim que ele perder o foco."
+  },
+  {
+    "id": "flutter_test_senior_01",
+    "pergunta": "Qual tester command espera animações + timers + microtasks?",
+    "opcoes": [
+      "pumpAndSettle()",
+      "pump(Duration.zero)",
+      "pumpFrames(1)",
+      "idle()"
+    ],
+    "indiceCorreto": 0,
+    "explicacao": "O `pumpAndSettle` é o 'martelo' dos testes: ele espera até que nada mais esteja acontecendo na tela antes de seguir para a próxima asserção."
+  },
+  {
+    "id": "mockito_senior_01",
+    "pergunta": "Qual mockito matcher verifica lista com ordem específica?",
+    "opcoes": [
+      "equals([1,2,3])",
+      "containsAll([1,2,3])",
+      "isOrderedList([1,2,3])",
+      "deepEquals([1,2,3])"
+    ],
+    "indiceCorreto": 0,
+    "explicacao": "O `equals` em listas no Mockito/Mocktail verifica se os elementos são iguais E estão na mesma ordem exata. Se a ordem não importa, usa-se `containsAll`."
+  },
+  {
+    "id": "ci_cd_senior_01",
+    "pergunta": "Qual GitHub Action step roda testes + coverage + golden tests?",
+    "opcoes": [
+      "flutter test --machine --coverage",
+      "flutter test --update-goldens",
+      "flutter drive --release",
+      "Ambos A e B"
+    ],
+    "indiceCorreto": 3,
+    "explicacao": "Pipelines de CI/CD costumam rodar os testes unitários com flags de cobertura e ferramentas que validam Goldens para evitar que mudanças de layout 'quebrem' as telas."
   }
 ]

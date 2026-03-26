@@ -3,6 +3,7 @@ class QuizItem {
   final String pergunta;
   final List<String> opcoes;
   final int indiceCorreto;
+  final String? explicacao;
   final DateTime? ultimaRevisada;
   final int acertos;
 
@@ -11,6 +12,7 @@ class QuizItem {
     required this.pergunta,
     required this.opcoes,
     required this.indiceCorreto,
+    this.explicacao,
     this.ultimaRevisada,
     this.acertos = 0,
   });
@@ -20,6 +22,7 @@ class QuizItem {
     String? pergunta,
     List<String>? opcoes,
     int? indiceCorreto,
+    String? explicacao,
     DateTime? ultimaRevisada,
     int? acertos,
   }) {
@@ -28,6 +31,7 @@ class QuizItem {
       pergunta: pergunta ?? this.pergunta,
       opcoes: opcoes ?? this.opcoes,
       indiceCorreto: indiceCorreto ?? this.indiceCorreto,
+      explicacao: explicacao ?? this.explicacao,
       ultimaRevisada: ultimaRevisada ?? this.ultimaRevisada,
       acertos: acertos ?? this.acertos,
     );

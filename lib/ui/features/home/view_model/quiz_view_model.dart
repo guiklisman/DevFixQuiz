@@ -8,7 +8,7 @@ class QuizViewModel extends ChangeNotifier {
   final IQuizRepository repository;
   static const _channel = MethodChannel('dev_quiz_fix/vibration');
 
-  // Estados
+
   List<QuizItem> _quizDiario = [];
   List<QuizItem> get quizDiario => List.unmodifiable(_quizDiario);
 

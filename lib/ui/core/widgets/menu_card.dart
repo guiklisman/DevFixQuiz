@@ -20,7 +20,7 @@ class MenuCard extends StatelessWidget {
   Widget build(BuildContext context) {
     return Card(
       elevation: 0,
-      color: Colors.white,
+      color: Theme.of(context).colorScheme.surface,
       shape: RoundedRectangleBorder(
         borderRadius: BorderRadius.circular(24),
       ),
@@ -34,7 +34,7 @@ class MenuCard extends StatelessWidget {
               Container(
                 padding: const EdgeInsets.all(16),
                 decoration: BoxDecoration(
-                  color: color.withOpacity(0.15),
+                  color: color.withValues(alpha: 0.15),
                   borderRadius: BorderRadius.circular(20),
                 ),
                 child: Icon(icon, size: 36, color: color),
@@ -49,7 +49,7 @@ class MenuCard extends StatelessWidget {
                       style: const TextStyle(
                         fontSize: 22,
                         fontWeight: FontWeight.w700,
-                        color: Color(0xFF2D3142),
+                        color: Color.fromARGB(255, 255, 255, 255),
                       ),
                     ),
                     const SizedBox(height: 6),
@@ -58,7 +58,7 @@ class MenuCard extends StatelessWidget {
                       style: TextStyle(
                         fontSize: 15,
                         fontWeight: FontWeight.w500,
-                        color: Colors.grey.shade600,
+                        color: Theme.of(context).colorScheme.onSurface.withOpacity(0.7),
                       ),
                     ),
                   ],
@@ -67,10 +67,12 @@ class MenuCard extends StatelessWidget {
               Container(
                 padding: const EdgeInsets.all(8),
                 decoration: BoxDecoration(
-                  color: Colors.grey.shade100,
+                  color: Theme.of(context).colorScheme.onSurface.withOpacity(0.05),
                   shape: BoxShape.circle,
                 ),
-                child: Icon(Icons.chevron_right_rounded, color: Colors.grey.shade400, size: 28),
+                child: Icon(Icons.chevron_right_rounded,
+                    color: Theme.of(context).colorScheme.onSurface.withOpacity(0.4),
+                    size: 28),
               ),
             ],
           ),

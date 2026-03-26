@@ -45,25 +45,7 @@ class NotificationService {
         ?.requestExactAlarmsPermission();
   }
 
-  Future<void> mostrarNotificacaoTeste() async {
-    const AndroidNotificationDetails androidPlatformChannelSpecifics =
-        AndroidNotificationDetails(
-      'dev_quiz_canal_teste',
-      'Testes',
-      importance: Importance.max,
-      priority: Priority.high,
-      icon: '@mipmap/ic_launcher',
-    );
-    const NotificationDetails platformChannelSpecifics =
-        NotificationDetails(android: androidPlatformChannelSpecifics);
 
-    await _localNotificationsPlugin.show(
-      id: 0,
-      title: 'Dev Quiz Fixar',
-      body: 'Esta é uma notificação de teste!',
-      notificationDetails: platformChannelSpecifics,
-    );
-  }
 
   Future<void> agendarLembreteDiario() async {
     const AndroidNotificationDetails androidPlatformChannelSpecifics =
@@ -88,7 +70,7 @@ class NotificationService {
       }
 
       await _localNotificationsPlugin.zonedSchedule(
-        id: hour, // O ID sendo a própria hora garante que não haja conflito
+        id: hour,
         title: 'Estou com saudades! 💙',
         body: 'Vamos responder algumas perguntas?',
         scheduledDate: scheduledDate,
@@ -113,18 +95,15 @@ class NotificationService {
 
     final now = tz.TZDateTime.now(tz.local);
 
-    // O flutter_local_notifications não repete "a cada X segundos" nativamente (mínimo é 1 minuto).
-    // Então, nós escalonamos 3 notificações em 5, 10 e 15 segundos para dar a sensação desejada!
-    for (int i = 1; i <= 3; i++) {
-        await _localNotificationsPlugin.zonedSchedule(
-          id: i * 10, // ids únicos: 10, 20, 30
-          title: 'Volta pro Quiz! 🚀',
-          body: 'Sua pontuação te aguarda. Não desista agora!',
-          scheduledDate: now.add(Duration(seconds: i * 5)),
-          notificationDetails: platformChannelSpecifics,
-          androidScheduleMode: AndroidScheduleMode.exactAllowWhileIdle,
-        );
-    }
+
+    await _localNotificationsPlugin.zonedSchedule(
+      id: 99,
+      title: 'Volta pro Quiz! 🚀',
+      body: 'Sua pontuação te aguarda. Não desista agora!',
+      scheduledDate: now.add(const Duration(minutes: 1)),
+      notificationDetails: platformChannelSpecifics,
+      androidScheduleMode: AndroidScheduleMode.exactAllowWhileIdle,
+    );
   }
 
   Future<void> cancelarTodasNotificacoes() async {

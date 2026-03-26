@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:flutter/services.dart';
 import 'package:provider/provider.dart';
 
 import 'core/services/notification_service.dart';
@@ -16,6 +17,7 @@ void main() async {
 
   final notificationService = NotificationService();
   await notificationService.init();
+
 
   runApp(
     MultiProvider(
@@ -73,20 +75,27 @@ class _MyAppState extends State<MyApp> with WidgetsBindingObserver {
 
   @override
   Widget build(BuildContext context) {
-    return MaterialApp(
-      title: 'Dev Quiz Fixar',
-      debugShowCheckedModeBanner: false,
-      theme: AppTheme.light,
-      home: const HomeScreen(),
-      builder: (context, child) {
-        ErrorWidget.builder = (FlutterErrorDetails details) => ErrorInfoView(
-          errorMessage: details.exception.toString(),
-          onRetry: () {
-            // Lógica de retry se necessário
-          },
-        );
-        return child!;
-      },
+    return  AnnotatedRegion<SystemUiOverlayStyle>(
+      value: const SystemUiOverlayStyle(
+        statusBarColor: Colors.transparent,
+        statusBarIconBrightness: Brightness.light,
+        systemNavigationBarColor: AppColors.background,
+        systemNavigationBarIconBrightness: Brightness.light,
+      ),
+      child: MaterialApp(
+        title: 'Dev Quiz Fix',
+        debugShowCheckedModeBanner: false,
+        theme: AppTheme.dark,
+        home: const HomeScreen(),
+        builder: (context, child) {
+          ErrorWidget.builder = (FlutterErrorDetails details) => ErrorInfoView(
+            errorMessage: details.exception.toString(),
+            onRetry: () {
+            },
+          );
+          return child!;
+        },
+      ),
     );
   }
 }

@@ -20,8 +20,8 @@ class OptionTile extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-    Color corFundo = Colors.white.withOpacity(0.1);
-    Color corBorda = Colors.white.withOpacity(0.3);
+    Color corFundo = Colors.white.withValues(alpha: 0.1);
+    Color corBorda = Colors.white.withValues(alpha: 0.3);
     Widget iconeLetra = Text(
       String.fromCharCode(65 + indice),
       key: ValueKey('texto_letra_$indice'),
@@ -34,18 +34,18 @@ class OptionTile extends StatelessWidget {
 
     if (respondido) {
       if (correto) {
-        corFundo = Colors.greenAccent.withOpacity(0.3);
+        corFundo = Colors.greenAccent.withValues(alpha: 0.3);
         corBorda = Colors.greenAccent;
         iconeLetra = const Icon(Icons.check,
             key: ValueKey('icone_check'), color: Colors.greenAccent, size: 20);
       } else if (selecionado) {
-        corFundo = Colors.redAccent.withOpacity(0.3);
+        corFundo = Colors.redAccent.withValues(alpha: 0.3);
         corBorda = Colors.redAccent;
         iconeLetra = const Icon(Icons.close,
             key: ValueKey('icone_close'), color: Colors.redAccent, size: 20);
       } else {
-        corFundo = Colors.white.withOpacity(0.05);
-        corBorda = Colors.white.withOpacity(0.1);
+        corFundo = Colors.white.withValues(alpha: 0.05);
+        corBorda = Colors.white.withValues(alpha: 0.1);
       }
     }
 
@@ -80,8 +80,8 @@ class OptionTile extends StatelessWidget {
                 height: 36,
                 decoration: BoxDecoration(
                   color: respondido && (correto || selecionado)
-                      ? Colors.white.withOpacity(0.1)
-                      : Colors.white.withOpacity(0.2),
+                      ? Colors.white.withValues(alpha: 0.1)
+                      : Colors.white.withValues(alpha: 0.2),
                   shape: BoxShape.circle,
                   border: Border.all(
                     color: (respondido && correto)

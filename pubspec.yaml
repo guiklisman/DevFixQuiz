@@ -26,6 +26,8 @@ dev_dependencies:
   flutter_lints: ^5.0.0
   mockito: ^5.6.3
   build_runner: ^2.13.0
+  flutter_launcher_icons: ^0.13.1
+  flutter_native_splash: ^2.4.0
 
 
 flutter:
@@ -33,3 +35,18 @@ flutter:
   uses-material-design: true
   assets:
     - assets/perguntas.json
+    - assets/images/
+
+flutter_launcher_icons:
+  android: true
+  ios: true
+  image_path: "assets/images/logo.png"
+  min_sdk_android: 21
+
+flutter_native_splash:
+  color: "#FFFFFF"
+  image: assets/images/logo.png
+  android_12:
+    image: assets/images/logo.png
+    color: "#FFFFFF"
+  fullscreen: true

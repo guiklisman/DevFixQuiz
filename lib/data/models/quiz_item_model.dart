@@ -6,6 +6,7 @@ class QuizItemModel extends QuizItem {
     required super.pergunta,
     required super.opcoes,
     required super.indiceCorreto,
+    super.explicacao,
     super.ultimaRevisada,
     super.acertos = 0,
   });
@@ -15,6 +16,7 @@ class QuizItemModel extends QuizItem {
         pergunta: json['pergunta'],
         opcoes: List<String>.from(json['opcoes']),
         indiceCorreto: json['indiceCorreto'],
+        explicacao: json['explicacao'],
         ultimaRevisada: json['ultimaRevisada'] != null
             ? DateTime.parse(json['ultimaRevisada'])
             : null,
@@ -26,6 +28,7 @@ class QuizItemModel extends QuizItem {
         'pergunta': pergunta,
         'opcoes': opcoes,
         'indiceCorreto': indiceCorreto,
+        'explicacao': explicacao,
         'ultimaRevisada': ultimaRevisada?.toIso8601String(),
         'acertos': acertos,
       };
@@ -35,6 +38,7 @@ class QuizItemModel extends QuizItem {
         pergunta: entity.pergunta,
         opcoes: entity.opcoes,
         indiceCorreto: entity.indiceCorreto,
+        explicacao: entity.explicacao,
         ultimaRevisada: entity.ultimaRevisada,
         acertos: entity.acertos,
       );

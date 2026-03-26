@@ -1,11 +1,11 @@
 import 'package:flutter/material.dart';
-import '../theme/app_theme.dart';
 
 class AppBackground extends StatelessWidget {
   final Widget child;
   final bool useSafeArea;
 
-  const AppBackground({
+  const
+  AppBackground({
     super.key,
     required this.child,
     this.useSafeArea = true,
@@ -18,9 +18,9 @@ class AppBackground extends StatelessWidget {
       height: double.infinity,
       decoration: const BoxDecoration(
         gradient: LinearGradient(
-          colors: AppColors.gradientPrimary,
-          begin: Alignment.topLeft,
-          end: Alignment.bottomRight,
+          colors: [Color(0xFF0F172A), Color(0xFF1E293B)],
+          begin: Alignment.topCenter,
+          end: Alignment.bottomCenter,
         ),
       ),
       child: child,
