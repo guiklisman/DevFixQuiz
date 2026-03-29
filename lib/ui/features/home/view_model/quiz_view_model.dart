@@ -91,6 +91,7 @@ class QuizViewModel extends ChangeNotifier {
         await _channel.invokeMethod('vibrate');
       } on PlatformException catch (e) {
         debugPrint("Método não implementado ou falha: ${e.message}");
+        _erro = e.message;
       }
 
       final novoItem = itemAtual.copyWith(
