@@ -17,6 +17,7 @@ void main() async {
 
   final notificationService = NotificationService();
   await notificationService.init();
+  
 
 
   runApp(
